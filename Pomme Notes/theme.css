@@ -1,327 +1,139 @@
-/* 🎨 Apple-Inspired Obsidian Theme */
+/* 🎨 Apple-Inspired Obsidian Theme - Optimized */
+
 /* Universal Apple-style smooth typography */
+:root {
+    --font-family-system: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+    --accent-color: #f7821b;
+    --background-border-opacity: 0.08;
+}
+
 body {
-    --font-family-editor: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    --font-family-preview: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    --font-size-editor: 16px !important;
-    --font-size-preview: 16px !important;
-    --line-height-editor: 1.5 !important;
-    --line-height-preview: 1.5 !important;
-    --accent-color: #f7821b !important;
-    --interactive-accent: #f7821b !important;
-    --text-normal: #1D1D1F !important;
+    --font-family-editor: var(--font-family-system);
+    --font-family-preview: var(--font-family-system);
+    --font-size-editor: var(--font-size-base);
+    --font-size-preview: var(--font-size-base);
+    --line-height-editor: var(--line-height-base);
+    --line-height-preview: var(--line-height-base);
+    --interactive-accent: var(--accent-color);
+    --text-normal: #1D1D1F;
 }
 
 /* 🌙 DARK MODE - Inspired by macOS dark mode */
 .theme-dark {
-    --background-primary: #1C1C1E !important;
-    --background-secondary: #2C2C2E !important;
-    --titlebar-background-focused: #2C2C2E !important;
-    --text-normal: #dcdcdc !important;
-
-    /* Minimalist border effects */
-    --background-modifier-border: rgba(255, 255, 255, 0.08);
+    --background-primary: #1C1C1E;
+    --background-secondary: #2C2C2E;
+    --titlebar-background-focused: #2C2C2E;
+    --text-normal: #dcdcdc;
+    --background-modifier-border: rgba(255, 255, 255, var(--background-border-opacity));
     --background-modifier-hover: rgba(255, 255, 255, 0.12);
     --background-modifier-active-hover: rgba(255, 255, 255, 0.15);
 }
 
-/* 🌙 FULL BLACK BACKGROUND FOR MOBILE DEVICES */
-@media (hover: none) and (pointer: coarse) {
-    .theme-dark {
-        --background-primary: #000000 !important;
-        --background-secondary: #1e1e1e !important;
-        --text-normal: #dcdcdc !important;
-    }
-}
-
 /* ☀️ LIGHT MODE - Inspired by Apple Notes */
 .theme-light {
-    --background-primary: #FFFFFF !important;
-    --background-secondary: #e9e9e9 !important;
-    --titlebar-background-focused: #e9e9e9 !important;
-    --text-normal: #454545 !important;
-    --text-muted: #3e3e3e !important;
-    --text-on-accent: #FFFFFF !important;
-
-    --background-modifier-border: rgba(0, 0, 0, 0.1);
-    --background-modifier-hover: rgba(0, 0, 0, 0.05);
-    --background-modifier-active-hover: rgba(0, 0, 0, 0.08);
+    --background-primary: #FFFFFF;
+    --background-secondary: #e9e9e9;
+    --titlebar-background-focused: #e9e9e9;
+    --text-normal: #454545;
+    --background-modifier-border: rgba(0, 0, 0, var(--background-border-opacity));
 }
 
-/* ======================== */
-/*  📌 HEADINGS & TEXT      */
-/* ======================== */
-
-/* Universal heading style for both Reading Mode and Live Preview */
-.markdown-preview-view h1,
-.markdown-preview-view h2,
+/* 📌 HEADINGS & TEXT */
+.markdown-preview-view h1, 
+.markdown-preview-view h2, 
 .markdown-preview-view h3,
 .markdown-preview-view h4,
 .markdown-preview-view h5,
-.markdown-preview-view h6,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header {
-  margin-bottom: 5px !important;
-  padding-bottom: 15px !important;
-  margin-top: 0px !important;
-  font-weight: 500 !important;
-  color: var(--text-normal) !important;
+.markdown-preview-view h6 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-normal);
 }
 
-/* Remove space between heading and the next paragraph */
-.markdown-preview-view h1 + p,
-.markdown-preview-view h2 + p,
-.markdown-preview-view h3 + p,
-.markdown-preview-view h4 + p,
-.markdown-preview-view h5 + p,
-.markdown-preview-view h6 + p,
-.markdown-source-view.mod-cm6 .HyperMD-header + .cm-line {
-  margin-top: 10px !important;
-  color: var(--text-normal) !important;
-}
-
-/* Adjustments for Print Mode */
-@media print {
-  p {
-    margin-top: 0px !important;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    padding-bottom: 10px !important;
-  }
-}
-
-/* ======================== */
-/*  📌 SELECTION & HIGHLIGHT */
-/* ======================== */
-
-::selection {
-    background: rgba(231, 136, 57, 0.15) !important;
-}
-
-/* 🎨 Apple-style highlight color */
+/* 📌 SELECTION & HIGHLIGHT */
+::selection,
 .markdown-preview-view mark,
 .cm-s-obsidian span.cm-highlight {
-    background-color: rgba(231, 136, 57, 0.25) !important;
-    color: #F7821B !important;
-    padding: 2px 4px !important;
-    border-radius: 4px !important;
+    background: rgba(231, 136, 57, 0.25);
+    color: var(--accent-color);
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
-/* ======================== */
-/*  📌 INTERFACE ELEMENTS  */
-/* ======================== */
-
-/* Cleaner UI - Remove unnecessary borders */
+/* 📌 INTERFACE ELEMENTS */
 .workspace-split, .workspace-leaf {
-    border: none !important;
-    box-shadow: none !important;
+    border: none;
+    box-shadow: none;
+
 }
 
-.nav-file-title.is-active {
-    font-weight: 600 !important;
-    border-radius: 4px !important;
-}
-
-.nav-folder-title.is-active {
-    font-weight: 600 !important;
-    border-radius: 8px !important;
-}
-
-/* Remove default underline from links */
-a, .internal-link {
-    text-decoration: none !important;
-    color: var(--interactive-accent) !important;
-}
-
-/* Apply subtle hover effect to links */
-a:hover, .internal-link:hover {
-    color: #A47864 !important;
-}
-
-/* Soft rounded corners everywhere */
-.markdown-preview-view, .cm-s-obsidian {
-    border-radius: 12px !important;
-}
-
-/* Apple-like animations */
-.workspace-leaf {
-    animation: fade-in 0.4s ease-in-out !important;
-}
-
+/* 📌 APPLE-LIKE ANIMATION */
 @keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: scale(1);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.workspace-leaf.is-closing {
-    animation: tab-blur-out 0.5s ease-in-out !important;
-    filter: blur(0px);
-}
-
-@keyframes tab-blur-out {
-    from {
-        opacity: 1;
-        filter: blur(0px);
-    }
-    to {
-        opacity: 0;
-        filter: blur(5px);
-    }
-}
-
-
-/* Smooth fade-in effect */
-.modal-container {
-    animation: fade-in-scale 0.3s ease-in-out !important;
-}
-
-@keyframes fade-in-scale {
-    from {
-        opacity: 0;
-        transform: scale(1);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Apply smooth fade-in animation to Quick Switcher */
-.suggestion-container {
-    animation: menu-fade-in 0.3s ease-in-out !important;
-}
-
-/* Ensure smooth appearance */
-@keyframes menu-fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.suggestion-container {
-    overflow-y: auto !important; /* Enable vertical scrolling */
-}
-
-/* A bit longer Animation on Mobiles */
-@media (max-width: 1366px) { 
-    .workspace-leaf, .modal-container, .menu, .suggestion-container {
-        animation-duration: 0.5s !important;
-    }
-}
-
-
-/* Fade-out closing tabs 
-.workspace-leaf.is-closing {
-    animation: tab-slide-out 0.5s ease-in-out !important;
-}*/
-
-/* Fade-out effect when closing
-@keyframes tab-slide-out {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-}*/
-
-
-/* CONTEXT MENUS (Right-click, settings dropdowns) */
+.workspace-leaf,
+.modal-container,
+.suggestion-container,
 .menu {
-    animation: menu-fade-in 0.3s ease-in-out !important;
+    animation: fade-in 0.25s ease-in-out;
 }
 
-/* Fade-in effect */
-@keyframes menu-fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(0px);
+.workspace-leaf.is-closing {
+    animation: fade-in 0.1s ease-in-out reverse;
+}
+
+/* 📌 MOBILE DEVICE-SPECIFIC STYLES */
+@media (hover: none) and (pointer: coarse) {
+
+    .workspace-leaf, .modal-container, .menu, .suggestion-container {
+        animation-duration: 0.4s;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
-
-
-/* ======================= */
-/*      📌 ICONIZE         */
-/* ======================= */
-
-
-/* 🌙 Dark Mode - Set icons to a light color */
-.theme-dark .iconize-icon {
-    color: #f7821b !important;
+/* 📌 CODE SYNTAX HIGHLIGHTING - APPLE UI INSPIRED */
+.theme-light {
+    --code-comment: #808080;
+    --code-tag: #D70040;
+    --code-value: #005BBB;
+    --code-string: #008000;
+    --code-property: #BF5AF2;
+    --code-function: #007AFF;
+    --code-keyword: #FF453A;
+    --code-important: #FF9F0A;
+    --code-text: #1D1D1F;
+    --code-background: rgba(0, 0, 0, 0.05);
 }
 
-/* ☀️ Light Mode - Set icons to a dark color */
-.theme-light .iconize-icon {
-    color: #f7821b !important;
+.theme-dark {
+    --code-comment: #A0A0A0;
+    --code-tag: #FF6188;
+    --code-value: #0A84FF;
+    --code-string: #50FA7B;
+    --code-property: #FFD60A;
+    --code-function: #5AC8FA;
+    --code-keyword: #FF9F0A;
+    --code-important: #FF453A;
+    --code-text: #FAFAFA;
+    --code-background: rgba(255, 255, 255, 0.1);
 }
 
-
-/* ======================= */
-/*      📌 FINAL TOUCHES   */
-/* ======================= */
-
-
-/* Hide embed titles for a cleaner look */
-.markdown-embed-title {
-    display: none !important;
-}
-
-/* Remove left border from embeds */
-.markdown-embed {
-  border-left: none !important;
-}
-
-/* Softer modal background for Apple-style dialogs */
-.modal-container {
-    background-color: rgba(120, 120, 120, 0.1) !important;
-    backdrop-filter: blur(3px) !important;
-}
-
-
-/* Checkboxes without strikethrough */
-body {
-    --checklist-done-decoration: none;
-}
-
-/* Wide YouTube Embeds */
-iframe[src*="youtu"] {
-    width: 100%;
-    height: 512px;
-    border-radius: 12px;
-}
-
-/* Dark mode: Make bold text white */
-.theme-dark strong, .theme-dark b {
-    color: #FFFFFF !important;
-}
+/* ===================== */
+/*      📌 DATAVIEW      */
+/* ===================== */
 
 /* Dataview column wrapping and coloring */
  .table-view-table>tbody>tr>td { 
     white-space: nowrap !important;
 }
 
-
 /* Styling for inline Dataview fields */
-
 .dataview.inline-field {
-  background-color: rgba(100, 100, 100, 0.20) !important;  /* Light background */
+  background-color: rgba(100, 100, 100, 0.20) !important;
   padding: 2px 2px !important;
   border-radius: 4px !important;
   font-size: 0.8em !important;
@@ -330,35 +142,46 @@ iframe[src*="youtu"] {
 
 /* 🏷️ Dataview Table Header Styling */
 .table-view-th {
-    font-size: 1em !important;
-    font-weight: 500 !important;
-    text-transform: none !important;
+    font-size: 1em !important;  /* Adjust size (default is often too large) */
+    font-weight: 500 !important;  /* Medium weight (default is often too bold) */
+    text-transform: none !important; /* Remove uppercase if applied */
 }
 
+/* 🏆 Optimized Expanding File Tree */
+.nav-folder-children {
+    transition: height 0.15s ease-out, opacity 0.15s ease-out;
+}
 
-/* 🏷️ Code Syntax Styling */
-.theme-light {  
-        --code-normal: #4d4d4c;  
-        --code-comment: #7e7e7e;  
-        --code-punctuation: #4d4d4c;  
-        --code-tag: #ff79c6;  
-        --code-value: #79d4ff;  
-        --code-string: #50fa7b;  
-        --code-property: #f8f8b7;  
-        --code-function: #ff79c6;  
-        --code-keyword: #bd93f9;  
-        --code-important: #4d4d4c;  
-        }  
-          
-.theme-dark {  
-        --code-normal: #f8f8f2;  
-        --code-comment: #7e7e7e;  
-        --code-punctuation: #f8f8f2;  
-        --code-tag: #ff79c6;  
-        --code-value: #8be9fd;  
-        --code-string: #50fa7b;  
-        --code-property: #f1fa8c;  
-        --code-function: #ff79c6;  
-        --code-keyword: #bd93f9;  
-        --code-important: #f8f8f2;  
-        }
+@media (prefers-reduced-motion: reduce) {
+    .nav-folder-children {
+        transition: none !important;
+    }
+}
+
+/* 🔗 Link Enhancements */
+a, .internal-link {
+    text-decoration: none !important;
+    color: var(--accent-color) !important;
+}
+
+a:hover, .internal-link:hover {
+    text-decoration: none !important;
+    color: var(--interactive-accent) !important;
+}
+
+/* 📌 FINAL TOUCHES */
+
+body {
+--checklist-done-decoration: none;
+}
+
+.markdown-embed-title { display: none; }
+.markdown-embed { border-left: none; }
+
+.modal-container {
+    background-color: rgba(20, 20, 20, 0.7);
+}
+
+.iconize-icon {
+    color: var(--accent-color);
+}
