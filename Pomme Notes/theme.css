@@ -1,5 +1,4 @@
 /* 🎨 Apple-Inspired Obsidian Theme */
-
 /* Universal Apple-style smooth typography */
 body {
     --font-family-editor: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -27,10 +26,11 @@ body {
 }
 
 /* 🌙 FULL BLACK BACKGROUND FOR MOBILE DEVICES */
-@media (max-width: 1366px) {
+@media (hover: none) and (pointer: coarse) {
     .theme-dark {
         --background-primary: #000000 !important;
         --background-secondary: #1e1e1e !important;
+        --text-normal: #dcdcdc !important;
     }
 }
 
@@ -362,4 +362,3 @@ iframe[src*="youtu"] {
         --code-keyword: #bd93f9;  
         --code-important: #f8f8f2;  
         }
-
