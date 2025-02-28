@@ -14,4 +14,5 @@ Latest version 1.6 now respects custom accent color and applies it to links, che
 - Full-size YouTube embeds
 - Styled checklists
 - Smooth fade-in animations for keyframes and menus
-- Iconize default color is taken from the color-accent variable 
+- Iconize default color is taken from the color-accent variable
+- Tab bars with a single tab are hidden by default for a cleaner look
