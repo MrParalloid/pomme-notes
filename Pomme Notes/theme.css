@@ -5,8 +5,9 @@
     --font-family-system: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.5;
-    --accent-color: #f7821b;
+    --accent-color: var(--color-accent);
     --background-border-opacity: 0.08;
+    }
 }
 
 body {
@@ -40,34 +41,50 @@ body {
     --background-modifier-border: rgba(0, 0, 0, var(--background-border-opacity));
 }
 
-/* 📌 HEADINGS & TEXT */
-.markdown-preview-view h1, 
-.markdown-preview-view h2, 
+/* 📌 Headings (Consistent & Readable) */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
 .markdown-preview-view h3,
 .markdown-preview-view h4,
 .markdown-preview-view h5,
-.markdown-preview-view h6 {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    font-weight: 500;
-    color: var(--text-normal);
+.markdown-preview-view h6,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-header {
+    margin-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    margin-top: 0px !important;
+    font-weight: 500 !important;
+    color: var(--text-normal) !important;
+}
+
+/* 🏆 Optimized Print Mode */
+@media print {
+    h1, h2, h3, h4, h5, h6 {
+        padding-bottom: 10px !important;
+    }
 }
 
 /* 📌 SELECTION & HIGHLIGHT */
-::selection,
+
 .markdown-preview-view mark,
 .cm-s-obsidian span.cm-highlight {
-    background: rgba(231, 136, 57, 0.25);
-    color: var(--accent-color);
-    padding: 2px 4px;
-    border-radius: 4px;
+    background-color: color-mix(in srgb, var(--color-accent) 20%, white 10%) !important;
+    color: var(--color-accent);
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+}
+
+/* 🖱️ Adjust highlighted links (Make them stand out) */
+mark a, 
+mark .internal-link, 
+mark .external-link, 
+.cm-s-obsidian span.cm-highlight a {
+    color: #ffffff !important; 
 }
 
 /* 📌 INTERFACE ELEMENTS */
 .workspace-split, .workspace-leaf {
     border: none;
     box-shadow: none;
-
 }
 
 /* 📌 APPLE-LIKE ANIMATION */
@@ -161,19 +178,15 @@ body {
 /* 🔗 Link Enhancements */
 a, .internal-link {
     text-decoration: none !important;
-    color: var(--accent-color) !important;
 }
 
 a:hover, .internal-link:hover {
     text-decoration: none !important;
-    color: var(--interactive-accent) !important;
-}
-
+    color: color-mix(in srgb, var(--color-accent) 65%, white 0%) !important;
+    }
+    
+    
 /* 📌 FINAL TOUCHES */
-
-body {
---checklist-done-decoration: none;
-}
 
 .markdown-embed-title { display: none; }
 .markdown-embed { border-left: none; }
@@ -183,5 +196,54 @@ body {
 }
 
 .iconize-icon {
-    color: var(--accent-color);
+    color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+    /* Hide tab headers if only one tab is open (Desktop only) */
+    .workspace-tab-header-container:has(.workspace-tab-header:nth-child(2)) {
+        display: flex; /* Keep visible when multiple tabs exist */
+    }
+
+    .workspace-tab-header-container:not(:has(.workspace-tab-header:nth-child(2))) {
+        display: none; /* Hide when only one tab exists */
+    }
+}
+
+/* 📺 Optimize YouTube Embeds */
+iframe[src*="youtu"] {
+    width: 100%;
+    height: 512px;
+    border-radius: 12px;
+}
+
+/* 🌙 Dark Mode - Make bold text white */
+.theme-dark strong, 
+.theme-dark b, 
+.theme-dark .cm-strong, 
+.theme-dark .markdown-preview-view strong {
+    color: #ffffff !important;
+}
+
+hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Adjust thickness */
+    background-color: rgba(128, 128, 128, 0.3);
+    margin: 1.5em 0;
+}
+
+.theme-light input[type="checkbox"] {
+    filter: none !important;
+    background-color: white !important;
+    border: 1px solid #454545 !important;
+}
+
+.theme-light input[type="checkbox"]:checked {
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+}
+
+body {
+    --checklist-done-decoration: none;
+    --checklist-done-color: #888888;
 }
