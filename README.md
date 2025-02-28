@@ -4,3 +4,10 @@ Latest version 1.6 now respects custom accent color and applies it to links, che
 
 ![](https://github.com/MrParalloid/pomme-notes/blob/main/some-fresh-themes-to-check-out-second-black-pomme-notes-v0-as15apb0rgke1.png)
 ![](https://github.com/MrParalloid/pomme-notes/blob/main/some-fresh-themes-to-check-out-second-black-pomme-notes-v0-m479fqb0rgke1.png)
+
+Some features:
+- Dark and light modes
+- Full-size YouTube embeds
+- Styled checklists
+- Smooth fade-in animations for keyframes and menus
+- Iconize default color is taken from the color-accent variable 
