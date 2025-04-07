@@ -1,9 +1,9 @@
-# Pomme Notes 1.6
-Latest release: 2025-02-28
+# Pomme Notes 1.0
+Latest release: 2025-04-07
 
 This is a lightweight theme to harmonize with macOS and iOS environments.
 Some smooth animations are there as well, but not too much, not to drain our batteries.
-Latest version 1.6 now respects custom accent color and applies it to links, checkboxes, and even Iconize's default color.
+This theme respects custom accent color and applies it throughout the theme, including links, checkboxes, and even Iconize's default color.
 
 ## Screenshots
 ![](https://github.com/MrParalloid/pomme-notes/blob/main/some-fresh-themes-to-check-out-second-black-pomme-notes-v0-as15apb0rgke1.png)
@@ -16,3 +16,6 @@ Latest version 1.6 now respects custom accent color and applies it to links, che
 - Smooth fade-in animations for keyframes and menus
 - Iconize default color is taken from the color-accent variable
 - Tab bars with a single tab are hidden by default for a cleaner look
+- Safari Tabs style by gavinmn with some extras
+- Customized Mobile looks, including bigger and coomfortable file navigation
+- Customized built-in and Dataview tables to somewhat match macOS style
