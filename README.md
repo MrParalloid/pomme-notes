@@ -1,5 +1,5 @@
-# Pomme Notes 1.0
-Latest release: 2025-04-07
+# Pomme Notes 1.0.1
+Latest release: 2025-04-08
 
 This is a lightweight theme to harmonize with macOS and iOS environments.
 Some smooth animations are there as well, but not too much, not to drain our batteries.
