@@ -1,7 +1,7 @@
 /*---------------------------
-Apple-Inspired Obsidian Theme
+Pomme Notes - Apple-inspired Obsidian Theme
 Version: 1.0
-@paralloid, 2025-04-07
+@paralloid, 2025-04-08
  --------------------------*/
 
 body {
@@ -10,7 +10,6 @@ body {
     --line-height-base: 1.5;
     --accent-color: var(--color-accent);
     --text-accent-hover: var(--color-accent-2);
-/*    --background-border-opacity: 0.08;*/
     --font-family-editor: var(--font-family-system);
     --font-family-preview: var(--font-family-system);
     --font-size-editor: var(--font-size-base);
@@ -26,6 +25,7 @@ body {
     --titlebar-background-focused: var(--background-secondary);
     --icon-stroke: 1.4px !important;
     --icon-l-stroke-width: 1.75px !important;
+    --embed-padding: 0px;
 }
 
 
@@ -40,6 +40,7 @@ body {
     --background-modifier-hover: rgba(255, 255, 255, 0.12);
     --background-modifier-active-hover: rgba(255, 255, 255, 0.15);
     --div-color: #191919;
+    --text-extreme: #FFF;
 }
 
 /* 🌙 Dark Mode - Make bold text white */
@@ -60,6 +61,7 @@ body {
     --text-normal: #454545;
     --background-modifier-border: rgba(200, 200, 200, 0.1);
     --div-color: #e6e6e6;
+    --text-extreme: #000;
 }
 
 body.is-phone {
@@ -240,12 +242,11 @@ body.is-phone {
     border-radius: 3px !important;
 }
 
-/* 🖱️ Adjust highlighted links (Make them stand out) */
 mark a, 
 mark .internal-link,
 mark .external-link,
 .cm-s-obsidian span.cm-highlight a {
-    color: #ffffff !important; 
+    color: #ffffff !important;
 }
 
 /* IMAGE VIEWERS */
@@ -617,15 +618,38 @@ body {
 }
 
 
-/* 🔗 Link Enhancements */
-a, .internal-link {
+/* Link Enhancements */
+.internal-link,
+.external-link,
+.cm-link,
+.cm-url,
+.cm-s-obsidian span.cm-hmd-internal-link,
+.cm-s-obsidian span.cm-hmd-external-link,
+.cm-s-obsidian .cm-link,
+.cm-s-obsidian a {
+    color: var(--text-accent) !important;
+    text-decoration: none !important;
+    caret-color: var(--accent-color) !important;
+}
+
+a:hover, 
+.internal-link:hover, 
+.external-link:hover, 
+.cm-link:hover, 
+.cm-url:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-hmd-external-link:hover {
+    color: var(--accent-color) !important;
     text-decoration: none !important;
 }
 
-a:hover, .internal-link:hover {
+a:focus, 
+.internal-link:focus, 
+.external-link:focus {
+    outline: none !important;
     text-decoration: none !important;
-    color: color-mix(in srgb, var(--color-accent) 65%, white 0%) !important;
-    }
+}
+
 
 .markdown-embed-title { display: none; }
 .markdown-embed { border-left: none; }
@@ -691,6 +715,7 @@ body.is-mobile .mobile-navbar::before {
       hsla(0, 0%, 0%, 0.7) 60%,
       hsla(0, 0%, 0%, 0.85) 70%,
       hsla(0, 0%, 0%, 0.9) 80%,
+      hsla(0, 0%, 0%, 0.95) 90%,
       hsla(0, 0%, 0%, 1) 100%
    );
    mask: linear-gradient(
@@ -704,6 +729,7 @@ body.is-mobile .mobile-navbar::before {
       hsla(0, 0%, 0%, 0.7) 60%,
       hsla(0, 0%, 0%, 0.85) 70%,
       hsla(0, 0%, 0%, 0.9) 80%,
+      hsla(0, 0%, 0%, 0.95) 90%,
       hsla(0, 0%, 0%, 1) 100%
    );
    inset: -15px 0 0;
