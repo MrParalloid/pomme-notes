@@ -146,6 +146,7 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
 .workspace-tab-header[data-type="markdown"],
 .workspace-tab-header[data-type="canvas"],
 .workspace-tab-header[data-type="image"],
+.workspace-tab-header[data-type="pdf"],
 .workspace-tab-header[data-type="empty"] {
   max-width: 100% !important;
   border-radius: 6px;
@@ -157,6 +158,9 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
 }
 
 .workspace-tab-header[data-type="markdown"].is-active.mod-active,
+.workspace-tab-header[data-type="canvas"].is-active.mod-active,
+.workspace-tab-header[data-type="image"].is-active.mod-active,
+.workspace-tab-header[data-type="pdf"].is-active.mod-active,
 .workspace-tab-header[data-type="empty"].is-active.mod-active {
   background-color: var(--tab-background-active);
   flex-grow: 2 !important;
@@ -804,6 +808,11 @@ body.is-phone .iconize-icon {
 .dnc table {
     table-layout: fixed;
     border-radius: 6px;
+    color: var(--text-muted);
+}
+
+.dnc svg {
+    stroke-width: 1.5px !important;
 }
 
 .dnc .header h1 {
@@ -811,9 +820,17 @@ font-weight: 700;
 font-size: 1.4em;
 color: var(--accent-color);
 margin-left: 9px;
-margin-right: -7px;
+margin-right: -2px;
 padding-top: 8px;
 padding-bottom: 10px;
+}
+
+.dnc .has-note:after {
+    display: none;
+}
+
+.dnc .has-note {
+    color: var(--text-extreme);
 }
 
 .dnc li {
