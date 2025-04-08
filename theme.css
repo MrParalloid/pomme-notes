@@ -1,6 +1,6 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.0
+Version: 1.0.1
 @paralloid, 2025-04-08
  --------------------------*/
 
@@ -144,6 +144,8 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
 }
 
 .workspace-tab-header[data-type="markdown"],
+.workspace-tab-header[data-type="canvas"],
+.workspace-tab-header[data-type="image"],
 .workspace-tab-header[data-type="empty"] {
   max-width: 100% !important;
   border-radius: 6px;
@@ -158,6 +160,14 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
 .workspace-tab-header[data-type="empty"].is-active.mod-active {
   background-color: var(--tab-background-active);
   flex-grow: 2 !important;
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+    display: none !important;
+}
+
+.workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-close-button {
+    display: flex !important;
 }
 
 .workspace-tab-header-inner::after {
