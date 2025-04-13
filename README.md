@@ -1,9 +1,10 @@
 # Pomme Notes
-Latest release: 1.1
-Updated: 2025-04-13
+Latest release: 1.2
+Updated: 2025-04-14
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
-Some smooth animations are there as well.
+Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
+
 This theme respects custom accent color and applies it throughout the theme, including links, checkboxes, and even Iconize's default color.
 
 Recommended plugins are:
@@ -27,3 +28,11 @@ Recommended plugins are:
 - Safari Tabs style by gavinmn with some extras
 - Customized Mobile looks, including bigger buttons and comfortable file navigation
 - Customized built-in tables and Dataview tables to match macOS style
+
+## Recommended Settings for Iconize
+Add custom rule based on regex to find all non-markdown files and assign a paperclip icon to them: 
+
+```
+^(?!.*\.md$).*
+```
+This way you'll see all attachments and files marked differently from regular notes and folders.
