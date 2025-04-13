@@ -1,9 +1,9 @@
 # Pomme Notes
-Latest release: 1.0.2
-Updated: 2025-04-12
+Latest release: 1.1
+Updated: 2025-04-13
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
-Some smooth animations are there as well, but not too much, not to drain our batteries.
+Some smooth animations are there as well.
 This theme respects custom accent color and applies it throughout the theme, including links, checkboxes, and even Iconize's default color.
 
 Recommended plugins are:
