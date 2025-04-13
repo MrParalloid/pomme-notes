@@ -356,8 +356,6 @@ body:not(.is-mobile) .view-content img {
 
 body:not(.is-mobile) .view-content img:active {
   cursor:zoom-out;
-  animation: fade-in 0.3s ease-in forwards;
-  transform-origin: center;
 }
 
 body:not(.is-mobile) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
@@ -377,7 +375,8 @@ body:not(.is-mobile) .view-content .image-embed:active {
   padding:0;
   left:0;
   right:0;
-  bottom:0
+  bottom:0;
+  animation: fade-in 0.3s ease;
 }
 
 body:not(.is-mobile) .view-content .image-embed:active img {
@@ -493,8 +492,7 @@ body.is-tablet .prompt {
     animation: slide-in 0.5s ease forwards;
     transform-origin: bottom;
     width: 70vw;
-    max-height: 35em;
-    transition: height 0.3s ease-out;
+    height: 65vw !important;
 }
 
 body.is-mobile .prompt-input-container {
