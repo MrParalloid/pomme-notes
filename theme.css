@@ -492,8 +492,8 @@ body.is-phone .prompt {
 
 body.is-phone .prompt-input-container {
     opacity: 0;
-    animation: fade-in 0.7s ease forwards !important;
-    animation-delay: 0.4s !important;
+    animation: fade-in 0.5s ease forwards !important;
+    animation-delay: 0.3s !important;
 }
 
 body.is-phone .menu-grabber {
