@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.2
-@paralloid, 2025-04-14
+Version: 1.2.1
+@paralloid, 2025-04-20
  --------------------------*/
 
 body {
@@ -45,6 +45,7 @@ body {
     --background-modifier-hover: rgba(255, 255, 255, 0.12);
     --background-modifier-active-hover: rgba(255, 255, 255, 0.15);
     --div-color: #191919;
+    --hr-color: #363636;
     --text-extreme: #FFF;
 }
 
@@ -156,7 +157,7 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
   box-shadow: none !important;
   transition: background-color 200ms ease-in-out;
   background: var(--tab-background);
-  transition: flex-grow 0.3s ease-in-out !important;
+  transition: flex-grow 0.2s ease-in-out !important;
 }
 
 .workspace-tab-header[data-type="markdown"].is-active.mod-active,
@@ -245,52 +246,10 @@ body.is-phone .nav-file-title {
     padding-left: 25px;
     padding-top: 8px;
     padding-bottom: 8px;
-    }
 }
 
-body.is-phone .workspace-drawer .nav-header,
-body.is-phone .workspace-drawer .nav-buttons-container {
-    background: transparent
-}
-
-body.is-phone .workspace-drawer .nav-buttons-container:before {
-    position: absolute;
-    z-index: -1;
-    background-color: var(--background-primary);
-    -webkit-mask: linear-gradient( to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.1) 5%,
-      hsla(0, 0%, 0%, 0.3) 10%,
-      hsla(0, 0%, 0%, 0.4) 15%,
-      hsla(0, 0%, 0%, 0.5) 20%,
-      hsla(0, 0%, 0%, 0.6) 25%,
-      hsla(0, 0%, 0%, 0.7) 40%,
-      hsla(0, 0%, 0%, 0.8) 50%,
-      hsla(0, 0%, 0%, 0.95) 60%,
-      hsla(0, 0%, 0%, 1) 70%,
-      hsla(0, 0%, 0%, 1) 80%,
-      hsla(0, 0%, 0%, 1) 90%,
-      hsla(0, 0%, 0%, 1) 100%
-   );
-   mask: linear-gradient(
-      to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.1) 5%,
-      hsla(0, 0%, 0%, 0.3) 10%,
-      hsla(0, 0%, 0%, 0.4) 15%,
-      hsla(0, 0%, 0%, 0.5) 20%,
-      hsla(0, 0%, 0%, 0.6) 25%,
-      hsla(0, 0%, 0%, 0.7) 40%,
-      hsla(0, 0%, 0%, 0.8) 50%,
-      hsla(0, 0%, 0%, 0.95) 60%,
-      hsla(0, 0%, 0%, 1) 70%,
-      hsla(0, 0%, 0%, 1) 80%,
-      hsla(0, 0%, 0%, 1) 90%,
-      hsla(0, 0%, 0%, 1) 100%
-   );
-   inset: -15px 0 0;
-   pointer-events: none;
-   content: "";
+body.is-mobile .nav-files-container {
+    margin-bottom: 20vw !important;
 }
 
 /* FILE EMBEDS ICON */
@@ -550,7 +509,7 @@ body.is-tablet {
     margin-bottom: 0.9em !important;
     padding-top: 10px !important;
     padding-bottom: 0.25rem !important;
-    border-bottom: 1px solid var(--div-color); 
+    border-bottom: 1px solid var(--hr-color); 
 }
 
 .markdown-preview-view h3,
@@ -568,9 +527,9 @@ body.is-tablet {
     font-weight: 650 !important;
     font-size: 1em;
     margin-top: 0px !important;
-    margin-bottom: 1.5em !important;
+    margin-bottom: 0em !important;
     padding-top: 0px !important;
-    border-bottom: 1px solid var(--div-color); 
+    border-bottom: 1px solid var(--hr-color); 
     padding-bottom: 0.25rem !important;
 }
 
@@ -927,7 +886,7 @@ body.is-phone .mobile-navbar::before {
 }
 
 
-/* PDF VIEWER */
+/* SMOOTH FADE-IN FOR EMBEDDED CONTENT */
 
 .pdf-toolbar {
     opacity: 0; 
@@ -942,6 +901,12 @@ body.is-phone .mobile-navbar::before {
 }
 
 .internal-embed img {
+    opacity: 0; 
+    animation: fade-in 0.3s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.internal-embed .canvas-minimap {
     opacity: 0; 
     animation: fade-in 0.3s ease forwards;
     animation-delay: 0.2s;
@@ -1255,8 +1220,12 @@ body:not(.tasks) li[data-task='D'].task-list-item.is-checked {
 }
 
 body.is-phone .iconize-icon {
-    max-width: 48px !important;
     padding-right: 8px;
+}
+
+body.is-phone .iconize-icon svg {
+  width: calc(1em + 8px) !important;
+  height: calc(1em + 8px) !important;
 }
 
 .dnc table {
