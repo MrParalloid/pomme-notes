@@ -1,5 +1,5 @@
 # Pomme Notes
-Latest release: 1.3
+Latest release: 1.3.2
 Updated: 2025-04-21
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
