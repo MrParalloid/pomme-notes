@@ -213,7 +213,7 @@ body {
     font-size: 0.9em;
 }
 
-.tree-item-self .tree-item-icon {
+.nav-files-container .tree-item-self .tree-item-icon {
     position: absolute;
     right: 0;
     display: flex;
