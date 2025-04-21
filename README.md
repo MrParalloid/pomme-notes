@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 1.2.1
-Updated: 2025-04-20
+Latest release: 1.3
+Updated: 2025-04-21
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
@@ -11,6 +11,7 @@ Recommended plugins are:
 - Iconize
 - Better Search Views
 - Daily Note Calendar
+- Zen Mode
 
 ## Screenshots
 ![](https://github.com/MrParalloid/pomme-notes/blob/main/images/main.jpg)
