@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.3.3
-@paralloid, 2025-04-21
+Version: 1.3.4
+@paralloid, 2025-04-25
  --------------------------*/
 
 body {
@@ -31,6 +31,7 @@ body {
     --blur-s: blur(2px);
     --blur-m: blur(5px);
     --blur-l: blur(10px);
+    --header-height: 45px;
 }
 
 
@@ -93,7 +94,7 @@ body:not(.is-mobile) .workspace-split.mod-right-split > .workspace-leaf-resize-h
 }
 
 .sidebar-toggle-button {
-    height: calc(var(--header-height) + 4px);
+    height: var(--header-height) + 1px);
 }
 
 .workspace-split.mod-vertical.mod-root .workspace-tab-header-inner-close-button { order: -1; margin-right: -22px }
@@ -146,7 +147,7 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
   width: 100%;
 }
 
-.workspace-tab-header[data-type="markdown"],
+/*.workspace-tab-header[data-type="markdown"],
 .workspace-tab-header[data-type="canvas"],
 .workspace-tab-header[data-type="image"],
 .workspace-tab-header[data-type="pdf"],
@@ -158,13 +159,28 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
   transition: background-color 200ms ease-in-out;
   background: var(--tab-background);
   transition: flex-grow 0.2s ease-in-out !important;
+}*/
+
+.mod-root .workspace-tab-header {
+  max-width: 100% !important;
+  border-radius: 6px;
+  padding: 0 !important;
+  box-shadow: none !important;
+  transition: background-color 200ms ease-in-out;
+  background: var(--tab-background);
+  transition: flex-grow 0.2s ease-in-out !important;
 }
 
-.workspace-tab-header[data-type="markdown"].is-active.mod-active,
+/*.workspace-tab-header[data-type="markdown"].is-active.mod-active,
 .workspace-tab-header[data-type="canvas"].is-active.mod-active,
 .workspace-tab-header[data-type="image"].is-active.mod-active,
 .workspace-tab-header[data-type="pdf"].is-active.mod-active,
 .workspace-tab-header[data-type="empty"].is-active.mod-active {
+  background-color: var(--tab-background-active);
+  flex-grow: 2 !important;
+}*/
+
+.mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--tab-background-active);
   flex-grow: 2 !important;
 }
