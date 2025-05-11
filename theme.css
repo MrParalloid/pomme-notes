@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.3.4
-@paralloid, 2025-04-25
+Version: 1.3.5
+@paralloid, 2025-05-11
  --------------------------*/
 
 body {
@@ -25,6 +25,7 @@ body {
     --titlebar-background-focused: var(--background-secondary);
     --icon-stroke: 1.4px !important;
     --icon-l-stroke-width: 1.75px !important;
+    --tab-stacked-pane-width: 1200px;
     --embed-padding: 0px;
     --hr-thickness: 1px;
     --hr-color: rgba(128, 128, 128, 0.3);
@@ -716,6 +717,31 @@ body {
     transition: none !important;
 }
 
+.dataview.result-group {
+    padding-left: 0px;
+}
+
+div.dataview-error-box {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--background-secondary);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 2em;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget):hover {
+    box-shadow: none;
+}
+
+.dataview.task-list-item:hover,
+.dataview.task-list-basic-item:hover {
+    background-color: var(--background-primary) !important;
+    box-shadow: -40px 0 0 var(--background-primary) !important;
+}
 .dataview.task-list-item:hover,
 .dataview.task-list-basic-item:hover {
     background-color: var(--background-secondary);
@@ -856,13 +882,18 @@ hr {
 .theme-light input[type="checkbox"] {
     filter: none !important;
     background-color: white !important;
-    border: 1px solid #454545 !important;
+    border: 0.5px solid #454545 !important;
 }
 
 .theme-light input[type="checkbox"]:checked {
     background-color: var(--color-accent) !important;
     border-color: var(--color-accent) !important;
 }
+
+input[type=checkbox]:checked:after {
+    animation: fade-in 0.3s ease-out;
+}
+
 
 body {
     --checklist-done-decoration: none;
