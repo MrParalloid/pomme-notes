@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.3.5
-@paralloid, 2025-05-11
+Version: 1.3.6
+@paralloid, 2025-05-15
  --------------------------*/
 
 body {
@@ -389,8 +389,6 @@ body:not(.is-mobile) .view-content .image-embed:active img {
   opacity:1
 }
 
-
-
 /* ANIMATIONS */
 @keyframes fade-in {
     from { 
@@ -530,7 +528,7 @@ body.is-tablet {
 /* ✨ Headings */
 /* ====================== */
 
-.markdown-preview-view h1,
+h1, .markdown-preview-view h1,
 .HyperMD-header-1 {
     font-weight: 600 !important;
     margin-top: 0px !important;
@@ -538,7 +536,7 @@ body.is-tablet {
     padding-top: 30px !important;
 }
 
-.markdown-preview-view h2,
+h2, .markdown-preview-view h2,
 .HyperMD-header-2 {
     font-weight: 600 !important;
     margin-top: 1rem !important;
@@ -548,7 +546,7 @@ body.is-tablet {
     border-bottom: 1px solid var(--hr-color); 
 }
 
-.markdown-preview-view h3,
+h3, .markdown-preview-view h3,
 .HyperMD-header-3 {
     font-weight: 600 !important;
     margin-top: 0px !important;
@@ -557,19 +555,19 @@ body.is-tablet {
     padding-bottom: 0.25em !important;
 }
 
-.markdown-preview-view h4,
+h4, .markdown-preview-view h4,
 .HyperMD-header-4 {
     padding-bottom: 0px !important;
     font-weight: 650 !important;
-    font-size: 1em;
+    font-size: 1em !important;
     margin-top: 0px !important;
     margin-bottom: 0em !important;
     padding-top: 0px !important;
-    border-bottom: 1px solid var(--hr-color); 
+    border-bottom: 1px solid var(--div-color); 
     padding-bottom: 0.25rem !important;
 }
 
-.markdown-preview-view h5,
+h5, .markdown-preview-view h5,
 .HyperMD-header-5 {
     padding-bottom: 0px !important;
     font-weight: 400 !important;
@@ -579,7 +577,7 @@ body.is-tablet {
     padding-top: 0px !important;
 }
 
-.markdown-preview-view h6,
+h6, .markdown-preview-view h6,
 .HyperMD-header-6 {
     padding-bottom: 0px !important;
     font-weight: 400 !important;
@@ -837,6 +835,10 @@ a:focus,
 .markdown-embed {
     border-left: none;
     padding-right: 25px;
+}
+
+body.is-phone iframe {
+    max-width: 350px !important;
 }
 
 .markdown-embed-link {
@@ -1349,14 +1351,20 @@ body.is-phone .iconize-icon svg {
     stroke-width: 1.5px !important;
 }
 
+.dnc .header {
+    opacity: 1;
+}
+
 .dnc .header h1 {
 font-weight: 700;
 font-size: 1.4em;
 color: var(--accent-color);
 margin-left: 9px;
-margin-right: -2px;
-padding-top: 8px;
-padding-bottom: 10px;
+margin-right: -7px;
+margin-bottom: 0px !important;
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+padding-right: 3px;
 }
 
 .dnc .has-note:after {
@@ -1407,6 +1415,10 @@ padding-bottom: 4px;
 
 body.zenmode-active:not(.is-mobile) .inline-title {
     margin-top: 0.5em;
+}
+
+body.is-phone .ddc_ink_resize-container {
+    max-width: 330px !important;
 }
 
 .zenmode-button {
