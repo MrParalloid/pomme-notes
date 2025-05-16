@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 1.3.6
-Updated: 2025-05-15
+Latest release: 1.3.7
+Updated: 2025-05-16
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
