@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 1.3.7
-Updated: 2025-05-16
+Latest release: 1.4
+Updated: 2025-05-19
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
@@ -29,6 +29,8 @@ Recommended plugins are:
 - Safari Tabs style by gavinmn with some extras
 - Customized Mobile looks, including bigger buttons and comfortable file navigation
 - Customized built-in tables and Dataview tables to match macOS style
+- Full black background options per device (via Style Settings)
+- Proper tab bar size on iPads
 
 ## Recommended Settings for Iconize
 Add custom rule based on regex to find all non-markdown files and assign a paperclip icon to them: 
