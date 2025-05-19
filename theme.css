@@ -1,8 +1,31 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.3.7
-@paralloid, 2025-05-16
+Version: 1.4
+@paralloid, 2025-05-19
  --------------------------*/
+
+/* @settings
+
+name: Pomme Notes Settings
+id: pomme-settings
+settings:
+
+    -
+        id: phone-full-black
+        title: Use Fully Black Backgrounds on Phones
+        type: class-toggle
+        default: true
+    -
+        id: tablet-full-black
+        title: Use Fully Black Background on Tablets
+        type: class-toggle
+        default: false
+    - 
+        id: desktop-full-black
+        title: Use Fully Black Background on Desktop
+        type: class-toggle
+        default: false
+*/
 
 body {
     --font-family-system: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -50,6 +73,22 @@ body {
     --hr-color: #363636;
     --text-extreme: #FFF;
 }
+
+body.is-phone.theme-dark.phone-full-black {
+        --background-primary: #000000 !important;
+        --background-secondary: #000000 !important;
+}
+
+body.is-tablet.theme-dark.tablet-full-black {
+        --background-primary: #000000 !important;
+        --background-secondary: #000000 !important;
+}
+
+body:not(.is-mobile).theme-dark.desktop-full-black {
+        --background-primary: #000000 !important;
+        --background-secondary: #000000 !important;
+}
+
 
 /* 🌙 Dark Mode - Make bold text white */
 .theme-dark strong, 
@@ -126,11 +165,6 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
     font-weight: 600;
 }
 
-.workspace-tab-header-container {
-    height: 45px;
-    border-bottom: none;
-}
-
 /* SAFARI TABS BY gavinmn with some extras */
 
 .theme-light {
@@ -149,20 +183,6 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
   width: 100%;
 }
 
-/*.workspace-tab-header[data-type="markdown"],
-.workspace-tab-header[data-type="canvas"],
-.workspace-tab-header[data-type="image"],
-.workspace-tab-header[data-type="pdf"],
-.workspace-tab-header[data-type="empty"] {
-  max-width: 100% !important;
-  border-radius: 6px;
-  padding: 0 !important;
-  box-shadow: none !important;
-  transition: background-color 200ms ease-in-out;
-  background: var(--tab-background);
-  transition: flex-grow 0.2s ease-in-out !important;
-}*/
-
 .mod-root .workspace-tab-header {
   max-width: 100% !important;
   border-radius: 6px;
@@ -173,18 +193,25 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
   transition: flex-grow 0.2s ease-in-out !important;
 }
 
-/*.workspace-tab-header[data-type="markdown"].is-active.mod-active,
-.workspace-tab-header[data-type="canvas"].is-active.mod-active,
-.workspace-tab-header[data-type="image"].is-active.mod-active,
-.workspace-tab-header[data-type="pdf"].is-active.mod-active,
-.workspace-tab-header[data-type="empty"].is-active.mod-active {
-  background-color: var(--tab-background-active);
-  flex-grow: 2 !important;
-}*/
-
 .mod-root .workspace-tab-header.is-active.mod-active {
   background-color: var(--tab-background-active);
   flex-grow: 2 !important;
+}
+
+.workspace-tab-header-container {
+    height: 45px;
+    border-bottom: none;
+}
+
+body.is-tablet .workspace-tab-header-container {
+    height: 55px;
+    border-bottom: none;
+}
+
+body.is-tablet .workspace-tab-header-inner:hover,
+body.is-tablet .workspace-tab-header-inner,
+body.is-tablet .mod-root .workspace-tab-header {
+  border-radius: 12px;
 }
 
 .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
@@ -442,7 +469,7 @@ body.is-mobile .modal-container {
 }
 
 .prompt {
-    background-color: rgba(var(--background-primary-rgb),0.98);
+    background-color: var(--background-primary);
     box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -471,6 +498,14 @@ body.is-phone .menu {
     border: none;
     max-width: 90vw;
     border-radius: 12px;
+}
+
+body.is-tablet .menu {
+    animation: fade-in 0.3s ease-out;
+    border: none;
+    max-width: 90vw;
+    border-radius: 12px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 body.is-phone .prompt {
