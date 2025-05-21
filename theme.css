@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.4
-@paralloid, 2025-05-19
+Version: 1.4.2
+@paralloid, 2025-05-21
  --------------------------*/
 
 /* @settings
@@ -204,14 +204,19 @@ body:not(.is-mobile) .workspace-tab-header-inner-close-button {
 }
 
 body.is-tablet .workspace-tab-header-container {
-    height: 55px;
+    height: 50px;
     border-bottom: none;
+}
+
+body.is-tablet .sidebar-toggle-button.mod-left,
+body.is-tablet .sidebar-toggle-button.mod-right {
+    padding-top: 15px;
 }
 
 body.is-tablet .workspace-tab-header-inner:hover,
 body.is-tablet .workspace-tab-header-inner,
 body.is-tablet .mod-root .workspace-tab-header {
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
@@ -380,7 +385,8 @@ body:not(.is-mobile) .view-content img:active {
   cursor:zoom-out;
 }
 
-body:not(.is-mobile) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
+/* This behaviour has changed due to 1.9 release */
+body:not(.is-mobile) .view-content .markdown-preview-view img:active,
 body:not(.is-mobile) .view-content .image-embed:active {
   background:var(--background-primary);
   cursor:zoom-out;
@@ -512,8 +518,9 @@ body.is-phone .prompt {
     animation: slide-in 0.5s ease forwards;
     transform-origin: bottom;
     max-width: 90vw;
-    max-height: 90vw;
+    max-height: 95vw;
     border-radius: 12px;
+    padding-bottom: 5vw;
 }
 
 body.is-tablet .prompt {
@@ -996,8 +1003,17 @@ body.is-phone .mobile-navbar::before {
    pointer-events: none;
    content: "";
 }
+/* For some reason this thing below is needed in 1.9 */
 
-.mobile-navbar-action:nth-child(3) .clickable-icon {
+body.is-mobile .workspace-leaf-content .nav-header {
+    order: 2;
+}
+
+/* Strangely enough in 1.9 "new note" child is not replacing the old place, but taking 4th position (seems the button "forward" is just hidden and still taking place). That's why the *code below* will work good with 1.9 but will break previous versions. 
+
+So for now I have to comment it out, and for those nerds on 1.9 who got here, feel free to uncomment stuff below to see a shiny new "New Note" button */
+
+/*.mobile-navbar-action:nth-child(4) .clickable-icon {
   color: var(--accent-color) !important;
   background-color: currentColor;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7'/%3E%3Cpath d='M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z'/%3E%3C/svg%3E");
@@ -1009,7 +1025,7 @@ body.is-phone .mobile-navbar::before {
   mask-size: 75% 75%;
   -webkit-mask-size: 75% 75%;
   display: inline-block;
-}
+}*/
 
 /* PULL DOWN ACTION */
 
