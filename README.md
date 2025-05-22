@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 1.4.2
-Updated: 2025-05-21
+Latest release: 1.4.5
+Updated: 2025-05-22
 
 **WARNING: Some mobile behavior has changed in 1.9 version, so mobile toolbar in 1.4.2 was reverted to the original state to keep compatibility. If you're on 1.9 and want fresh new note icon that was available previously – uncomment the block at line 1016.**
 
@@ -33,6 +33,7 @@ Recommended plugins are:
 - Customized built-in tables and Dataview tables to match macOS style
 - Full black background options per device (via Style Settings)
 - Proper tab bar size on iPads
+- Ability to switch Mobile Action Bar style to pre-1.9 version
 
 ## Recommended Settings for Iconize
 Add custom rule based on regex to find all non-markdown files and assign a paperclip icon to them: 
