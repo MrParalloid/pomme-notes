@@ -36,9 +36,13 @@ Recommended plugins are:
 - Ability to switch Mobile Action Bar style to pre-1.9 version
 
 ## Recommended Settings for Iconize
-Add custom rule based on regex to find all non-markdown files and assign a paperclip icon to them: 
+Add custom rule based on regex to find all non-markdown files and assign a paperclip 📎 icon to them: 
 
 ```
 ^(?!.*\.md$).*
 ```
 This way you'll see all attachments and files marked differently from regular notes and folders.
+For .base files introduced in 1.9 you can use this regex:
+```
+^.*\.(base)$
+```
