@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.4.6
-@paralloid, 2025-05-23
+Version: 1.4.7
+@paralloid, 2025-05-29
  --------------------------*/
 
 /* @settings
@@ -360,8 +360,8 @@ body.is-phone .nav-file-title {
 .cm-s-obsidian span.cm-highlight {
     background-color: color-mix(in srgb, var(--color-accent) 20%, white 10%) !important;
     color: var(--color-accent);
-    padding: 2px 4px !important;
-    border-radius: 3px !important;
+    padding: 2px 2px !important;
+    border-radius: 2px !important;
 }
 
 mark a, 
@@ -388,15 +388,15 @@ body.is-mobile .mobile-image-viewer img{border-radius:0}
 
 body:not(.is-mobile) .view-content img {
   max-width:100%;
-  cursor:zoom-in
+  cursor:zoom-in;
   }
 
 body:not(.is-mobile) .view-content img:active {
   cursor:zoom-out;
 }
 
-/* This behaviour has changed due to 1.9 release */
 body:not(.is-mobile) .view-content .markdown-preview-view img:active,
+.markdown-source-view.mod-cm6 .cm-content > img:active,
 body:not(.is-mobile) .view-content .image-embed:active {
   background:var(--background-primary);
   cursor:zoom-out;
@@ -415,21 +415,6 @@ body:not(.is-mobile) .view-content .image-embed:active {
   right:0;
   bottom:0;
   animation: fade-in 0.3s ease;
-}
-
-body:not(.is-mobile) .view-content .image-embed:active img {
-  top:50%;
-  transform:translateY(-50%);
-  padding:0;
-  margin:0 auto;
-  width:100%;
-  max-height:100vh;
-  object-fit:contain;
-  left:0;
-  right:0;
-  bottom:0;
-  position:absolute;
-  opacity:1
 }
 
 /* ANIMATIONS */
@@ -1422,6 +1407,11 @@ body:not(.tasks) li[data-task='D'].task-list-item.is-checked {
     stroke-width: var(--icon-stroke) !important;
 }
 
+.cm-iconize-icon svg {
+    min-width: 1.2em;
+    min-height: 1.2em;
+}
+
 body.is-phone .iconize-icon {
     padding-right: 8px;
 }
@@ -1457,6 +1447,14 @@ padding-bottom: 0px !important;
 padding-right: 3px;
 }
 
+.dnc #today.has-note {
+    font-weight: 600;
+}
+
+.dnc #today {
+    border-radius: 2px;
+    font-weight: 600;
+}
 .dnc .has-note:after {
     display: none;
 }
