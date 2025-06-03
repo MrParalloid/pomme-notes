@@ -1,6 +1,6 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.4.8
+Version: 1.4.9
 @paralloid, 2025-06-03
  --------------------------*/
 
@@ -389,16 +389,16 @@ body.is-mobile .mobile-image-viewer img{border-radius:0}
 /* Image zoom  */
 /* Credits: kepano, limex, rockhard, https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164 */
 
-.view-content img {
+body:not(.is-mobile) .view-content img {
   cursor:zoom-in;
 }
 
-.view-content img:active {
+body:not(.is-mobile) .view-content img:active {
   cursor:zoom-out;
 }
 
-.view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
-.view-content .image-embed:active {
+body:not(.is-mobile) .view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
+body:not(.is-mobile) .view-content .image-embed:active {
   background:var(--background-primary);
   cursor:zoom-out;
   display:block;
@@ -419,7 +419,7 @@ body.is-mobile .mobile-image-viewer img{border-radius:0}
   animation: fade-in 0.2s ease;
 }
 
-.view-content .image-embed:active img {
+body:not(.is-mobile) .view-content .image-embed:active img {
   top:50%;
   transform:translateY(-50%);
   padding:0;
