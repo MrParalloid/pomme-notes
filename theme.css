@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.4.7
-@paralloid, 2025-05-29
+Version: 1.4.8
+@paralloid, 2025-06-03
  --------------------------*/
 
 /* @settings
@@ -386,18 +386,19 @@ body.is-mobile .mobile-image-viewer img{border-radius:0}
     border-radius: 4px                
 }
 
-body:not(.is-mobile) .view-content img {
-  max-width:100%;
-  cursor:zoom-in;
-  }
+/* Image zoom  */
+/* Credits: kepano, limex, rockhard, https://forum.obsidian.md/t/image-zoom-click-hold-to-expand-images/5164 */
 
-body:not(.is-mobile) .view-content img:active {
+.view-content img {
+  cursor:zoom-in;
+}
+
+.view-content img:active {
   cursor:zoom-out;
 }
 
-body:not(.is-mobile) .view-content .markdown-preview-view img:active,
-.markdown-source-view.mod-cm6 .cm-content > img:active,
-body:not(.is-mobile) .view-content .image-embed:active {
+.view-content .markdown-preview-view img[referrerpolicy='no-referrer']:active,
+.view-content .image-embed:active {
   background:var(--background-primary);
   cursor:zoom-out;
   display:block;
@@ -405,17 +406,37 @@ body:not(.is-mobile) .view-content .image-embed:active {
   position:fixed;
   max-height:100%;
   max-width:100%;
-  height:100%;
-  width:100%;
+  height:auto;
+  width:auto;
   object-fit:contain;
   margin:0 auto;
   text-align:center;
   padding:0;
   left:0;
   right:0;
+  top: 0%;
   bottom:0;
-  animation: fade-in 0.3s ease;
+  animation: fade-in 0.2s ease;
 }
+
+.view-content .image-embed:active img {
+  top:50%;
+  transform:translateY(-50%);
+  padding:0;
+  margin:0 auto;
+  width: auto;
+  height: auto;
+  max-height: min(100%, 100vh);
+  max-width: min(100%, 100vw);
+  object-fit:contain;
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  opacity:1;
+  animation: fade-in 0.2s ease;
+}
+
 
 /* ANIMATIONS */
 @keyframes fade-in {
