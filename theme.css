@@ -1,7 +1,7 @@
 /*---------------------------
 Pomme Notes - Apple-inspired Obsidian Theme
-Version: 1.4.9
-@paralloid, 2025-06-03
+Version: 1.4.10
+@paralloid, 2025-06-17
  --------------------------*/
 
 /* @settings
@@ -1033,7 +1033,12 @@ body.is-phone .mobile-navbar::before {
 }
 
 body.is-mobile .workspace-leaf-content .nav-header {
+    order: -1;
+}
+
+body.is-mobile .workspace-drawer.mod-left .workspace-drawer-header {
     order: 2;
+    padding-bottom: 10px;
 }
 
 body.old-navbar .mobile-navbar-action-forward {
