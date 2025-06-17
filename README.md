@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 1.4.9
-Updated: 2025-06-03
+Latest release: 1.4.10
+Updated: 2025-06-17
 
 **WARNING: Some mobile behavior has changed in 1.9 version, so mobile toolbar in 1.4.2 was reverted to the original state to keep compatibility. If you're on 1.9 and want fresh new note icon that was available previously – uncomment the block at line 1016.**
 
