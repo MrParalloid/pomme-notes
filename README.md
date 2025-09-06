@@ -1,8 +1,6 @@
 # Pomme Notes
-Latest release: 1.4.10
-Updated: 2025-06-17
-
-**WARNING: Some mobile behavior has changed in 1.9 version, so mobile toolbar in 1.4.2 was reverted to the original state to keep compatibility. If you're on 1.9 and want fresh new note icon that was available previously – uncomment the block at line 1016.**
+Latest release: 1.5
+Updated: 2025-09-05
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
@@ -11,6 +9,7 @@ This theme respects custom accent color and applies it throughout the theme, inc
 
 Recommended plugins are:
 - Iconize
+- Iconic
 - Better Search Views
 - Daily Note Calendar
 - Zen Mode
