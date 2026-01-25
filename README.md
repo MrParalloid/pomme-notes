@@ -17,6 +17,8 @@ This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 <img width="1153" height="901" alt="Screenshot 2026-01-25 at 11 29 46" src="https://github.com/user-attachments/assets/60bea5f7-a207-4afd-9ff7-1fc7c04e49db" />
 <img width="1188" height="942" alt="2026-01-25 at 11 26 40 Pomme Notes 2" src="https://github.com/user-attachments/assets/2992dc2b-25e1-4c6b-950d-8c8095a96862" />
 <img width="977" height="299" alt="2026-01-25 at 11 27 14 Pomme Notes 2" src="https://github.com/user-attachments/assets/7c8bec26-3c67-405f-9477-f5564be4146d" />
+<img width="1072" height="607" alt="Screenshot 2026-01-25 at 17 54 38" src="https://github.com/user-attachments/assets/445c0ef3-8793-4d8d-a448-89087503161c" />
+
 
 
 ## Recommended Settings for Iconize
