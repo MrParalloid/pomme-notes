@@ -2,15 +2,46 @@
 Latest release: 2.0.2
 Updated: 2026-01-25
 
-This is a lightweight subtle theme to harmonize with macOS and iOS environments. It tries to keep close to native Obsidian theme, just adding subtle touches here and there. If you like the original Obsidian experience but what to add a bit of a native feel and some fresh feel, like Liquid Glass elements, give it a try.
+Pomme Notes is a lightweight, subtle theme designed to harmonize with macOS and iOS environments. It strictly adheres to a "Native+" philosophy: keeping the familiar structure of the default Obsidian interface while introducing organic textures, smoother animations, and a modern "Liquid Glass" aesthetic.
+
+If you enjoy the original Obsidian experience but want it to feel more like a native app—with softer contrast and tactile depth—this theme is for you.
 
 ## Features
-- Good looking Liquid Glass elements taiored for Desktop and Mobile flavors separately
-- Slightly reduced contrast, avoiding pure white text and backgrounds, or pure black text on white makes this theme easy on your eyes.
-- Some smooth animations and smooth fade-ins for embedded content
-- Custom accent color are applied throughout the theme, calculating accents for Blockquotes and Highlights.
-- Dataview optimizations, including the removal of unnecessary hover animations
-- Fine tuned Headings and other elements
+**Liquid Glass UI**
+Flat overlays replaced with translucent, frosted elements that blur the content behind them, adding depth without clutter.
+- Glassy Modals & Prompts: Quick Switcher and Settings modals float with a frosted backdrop.
+- Floating Status Bar: The status bar is transformed into a centered, floating glass capsule.
+- Active Tabs: Subtle glass highlights and shadows distinguish your active workspace.
+
+**Visual Comfort**
+Engineered for long-term readability by avoiding harsh extremes.
+- Softened Contrast: Avoids pure white (#ffffff) backgrounds and pure black text. Dark mode uses a deep grey (#191919) with soft silver text (#cccccc) to reduce eye strain.
+- Harmonized Accents: Blockquotes, highlights, and checkboxes automatically calculate their colors based on your primary accent hue.
+
+**Organic Motion**
+The interface feels alive with subtle, non-intrusive animations.
+- Smooth Fade-ins: Embedded content (PDFs, images, Canvas minimaps) fades in gently upon loading.
+- Menu Dynamics: Context menus scale and slide in, mimicking native OS behavior.
+- Pulse Effects: Subtle flashing animations for specific interaction states.
+
+**Mobile Optimized**
+Extensive work has been done to ensure the theme feels native on iOS and iPadOS.
+- Touch Targets: Larger, friendlier tap targets for file explorers and menus.
+- Mobile Glass: The liquid glass effect is optimized for mobile performance, appearing on navigation bars and floating menus.
+- Clean Layout: Simplified sidebars and reduced noise on smaller screens.
+
+## Plugin Support
+Pomme Notes includes dedicated styling for popular plugins to ensure they fit the theme's aesthetic:
+- Dataview: Optimized tables and lists with unnecessary hover animations removed.
+- Calendar: Custom grid styling and indicator dots.
+- Ink: Improved integration for handwriting and drawing tools.
+- Iconize & Iconic: Native sizing and spacing for custom icons.
+
+## Installation
+Open Settings > Appearance.
+Click Manage under Themes.
+Search for Pomme Notes.
+Click Install and Use.
 
 ## Screenshots
 <img width="1188" height="942" alt="2026-01-25 at 11 26 26 Pomme Notes 2" src="https://github.com/user-attachments/assets/3196d0e1-723a-49e9-b053-ef14c353ef02" />
@@ -18,17 +49,3 @@ This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 <img width="1188" height="942" alt="2026-01-25 at 11 26 40 Pomme Notes 2" src="https://github.com/user-attachments/assets/2992dc2b-25e1-4c6b-950d-8c8095a96862" />
 <img width="977" height="299" alt="2026-01-25 at 11 27 14 Pomme Notes 2" src="https://github.com/user-attachments/assets/7c8bec26-3c67-405f-9477-f5564be4146d" />
 <img width="1072" height="607" alt="Screenshot 2026-01-25 at 17 54 38" src="https://github.com/user-attachments/assets/445c0ef3-8793-4d8d-a448-89087503161c" />
-
-
-
-## Recommended Settings for Iconize
-Add custom rule based on regex to find all non-markdown files and assign a paperclip 📎 icon to them: 
-
-```
-^(?!.*\.md$).*
-```
-This way you'll see all attachments and files marked differently from regular notes and folders.
-For .base files introduced in 1.9 you can use this regex:
-```
-^.*\.(base)$
-```
