@@ -2,7 +2,7 @@
 Latest release: 2.0.2
 Updated: 2026-01-25
 
-This is a lightweight subtle theme to harmonize with macOS and iOS environments. It tries to keep close to native Obsidian theme, just adding subtle touches here and there. If you like the original Obsidian experience but what to add a bit of a native feel and some fresh experiences, give it a try.
+This is a lightweight subtle theme to harmonize with macOS and iOS environments. It tries to keep close to native Obsidian theme, just adding subtle touches here and there. If you like the original Obsidian experience but what to add a bit of a native feel and some fresh feel, like Liquid Glass elements, give it a try.
 
 ## Features
 - Good looking Liquid Glass elements taiored for Desktop and Mobile flavors separately
