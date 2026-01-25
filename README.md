@@ -1,21 +1,14 @@
 # Pomme Notes
-Latest release: 1.5
-Updated: 2025-09-05
+Latest release: 2.0.1
+Updated: 2025-01-25
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments.
 Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
 
-This theme respects custom accent color and applies it throughout the theme, including links, checkboxes, and even Iconize's default color.
-
-Recommended plugins are:
-- Iconize
-- Iconic
-- Better Search Views
-- Daily Note Calendar
-- Zen Mode
+This theme respects custom accent color and applies it throughout the theme, calculating accents for Blockquotes and Highlighters.
 
 ## Screenshots
-![](https://github.com/MrParalloid/pomme-notes/blob/main/images/main.jpg)
+TBD
 
 ## Some features:
 - Smooth experience and native look & feel on Apple devices
