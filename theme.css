@@ -1,6 +1,6 @@
 /*──────────────────────────────────────
 Pomme Notes Theme for Obsidian
-Version 2.0.1
+Version 2.0.2
 @paralloid, 2026-01-25
 ───────────────────────────────────────*/
 
@@ -329,7 +329,7 @@ body:not(.is-mobile) .modal.mod-settings {
     border-radius: var(--radius-l);
 }
 
-.mod-settings .modal-close-button {
+.modal-close-button {
     margin-top: 5px;
     margin-right: 5px;
 }
@@ -881,7 +881,8 @@ body {
 
 .status-bar {
     position: fixed;
-    right: 46%;
+    left: 50%;
+    transform: translatex(-50%);
     bottom: 10px;
     width: fit-content;
     max-width: min(60rem, 90vw);
@@ -900,10 +901,8 @@ body {
 }
 
 .is-mobile .mod-raised:not(.canvas-control-group) {
-    /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); */
     backdrop-filter: blur(2px) saturate(140%);
     -webkit-backdrop-filter: blur(2px) saturate(140%);
-    /* border: 1.25px solid var(--transparent-border); */
 }
 
 .is-mobile .mod-raised {
@@ -1308,7 +1307,12 @@ body {
 .is-mobile .mobile-navbar,
 .input-button,
 .mod-raised,
+.document-replace-input,
 .search-input-container input {
     border: none !important;
     box-shadow: var(--glass-edge) !important;
+}
+
+.document-replace-input {
+border-radius: var(--radius-l) !important;
 }
