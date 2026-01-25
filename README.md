@@ -9,7 +9,7 @@ If you enjoy the original Obsidian experience but want it to feel more like a na
 ## Features
 **Liquid Glass UI**
 Flat overlays replaced with translucent, frosted elements that blur the content behind them, adding depth without clutter.
-- Glassy Modals & Prompts: Quick Switcher and Settings modals float with a frosted backdrop.
+- Glassy Modals & Prompts: Quick Switcher and Settings modals float with a native look & feel. All the input prompts feel at home.
 - Floating Status Bar: The status bar is transformed into a centered, floating glass capsule.
 - Active Tabs: Subtle glass highlights and shadows distinguish your active workspace.
 
