@@ -1,6 +1,6 @@
 # Pomme Notes
 Latest release: 2.0.1
-Updated: 2025-01-25
+Updated: 2026-01-25
 
 This is a lightweight subtle theme to harmonize with macOS and iOS environments. It tries to keep close to native Obsidian theme, just adding subtle touches here and there. If you like the original Obsidian experience but what to add a bit of a native feel and some fresh experiences, give it a try.
 
