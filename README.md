@@ -2,30 +2,21 @@
 Latest release: 2.0.1
 Updated: 2025-01-25
 
-This is a lightweight subtle theme to harmonize with macOS and iOS environments.
-Some smooth animations and smooth fade-ins for embedded PDFs and Images make it look quite pleasing to use.
+This is a lightweight subtle theme to harmonize with macOS and iOS environments. It tries to keep close to native Obsidian theme, just adding subtle touches here and there. If you like the original Obsidian experience but what to add a bit of a native feel and some fresh experiences, give it a try.
 
-This theme respects custom accent color and applies it throughout the theme, calculating accents for Blockquotes and Highlighters.
+## Features
+- Good looking Liquid Glass elements taiored for Desktop and Mobile flavors separately
+- Slightly reduced contrast, avoiding pure white text and backgrounds, or pure black text on white makes this theme easy on your eyes.
+- Some smooth animations and smooth fade-ins for embedded content
+- Custom accent color are applied throughout the theme, calculating accents for Blockquotes and Highlights.
+- Dataview optimizations, including the removal of unnecessary hover animations
+- Fine tuned Headings and other elements
 
 ## Screenshots
-TBD
+<img width="1188" height="942" alt="2026-01-25 at 11 26 40 Pomme Notes 2" src="https://github.com/user-attachments/assets/2992dc2b-25e1-4c6b-950d-8c8095a96862" />
+<img width="977" height="299" alt="2026-01-25 at 11 27 14 Pomme Notes 2" src="https://github.com/user-attachments/assets/7c8bec26-3c67-405f-9477-f5564be4146d" />
+<img width="1188" height="942" alt="2026-01-25 at 11 26 26 Pomme Notes 2" src="https://github.com/user-attachments/assets/3196d0e1-723a-49e9-b053-ef14c353ef02" />
 
-## Some features:
-- Smooth experience and native look & feel on Apple devices
-- Optimized for Retina displays
-- Dark and light modes
-- Full-size YouTube embeds
-- Minimal embeds that blend inside the notes
-- Styled checkboxes
-- Custom checkboxes by Kepano
-- Smooth fade-in animations for keyframes and menus
-- Iconize default color is taken from the color-accent variable
-- Safari Tabs style by gavinmn with some extras
-- Customized Mobile looks, including bigger buttons and comfortable file navigation
-- Customized built-in tables and Dataview tables to match macOS style
-- Full black background options per device (via Style Settings)
-- Proper tab bar size on iPads
-- Ability to switch Mobile Action Bar style to pre-1.9 version
 
 ## Recommended Settings for Iconize
 Add custom rule based on regex to find all non-markdown files and assign a paperclip 📎 icon to them: 
