@@ -1,8 +1,21 @@
 /*──────────────────────────────────────
 Pomme Notes Theme for Obsidian
-Version 2.0.2
-@paralloid, 2026-01-25
+Version 2.0.3
+@paralloid, 2026-02-02
 ───────────────────────────────────────*/
+
+/* @settings
+
+name: Pomme Notes Settings
+id: pomme-notes-settings
+settings:
+
+    -
+        id: tinted
+        title: Use accent-tinted interface
+        type: class-toggle
+        default: false
+*/
 
 @charset "UTF-8";
 body {
@@ -91,10 +104,16 @@ body {
     --text-normal: #323232;
 }
 
+.tinted.theme-light {
+    --background-primary: color-mix(in srgb, #f7f7f7 99%, var(--interactive-accent) 1%) !important;
+    --background-secondary: color-mix(in srgb, #efefef 97%, var(--interactive-accent) 3%) !important;
+}
+
 .workspace-leaf-resize-handle {
     border: transparent !important;
     padding-right: 3px !important;
 }
+
 
 /* ANIMATIONS */
 
@@ -320,8 +339,8 @@ body:not(.is-mobile) .modal.mod-settings {
     animation: fade-in-prompt 0.2s cubic-bezier(.69,.39,.55,1.79) forwards;
 }
 
-.mod-settings .setting-item-control > * {
-    /* border: 1.25px solid var(--transparent-border); */
+.mod-settings .setting-item-control .dropdown,
+.mod-settings button:not(.clickable-icon)  {
     box-shadow: var(--statusbar-glass-shadow);
 }
 
@@ -510,6 +529,7 @@ body:not(.is-mobile) .nav-files-container .tree-item-self {
 
 .is-mobile .nav-files-container .nav-folder-title {
     font-weight: 600;
+    color: var(--text-extreme) !important;
 }
 
 /* buttons */
@@ -559,7 +579,7 @@ button:not(.clickable-icon) {
 .is-flashing {
     padding: 2px;
     border-radius: 4px;
-    background-color: var(--color-red-trans)!important;
+    background-color: var(--text-highlight-bg) !important;
     animation: flashing 0.6s;
     color: var(--normal-text) !important;
     border: none;
@@ -734,7 +754,7 @@ body {
 input[type=checkbox] {
     border-radius: 15px;
     border: 2px solid var(--checkbox-border-color);
-    /* transition: box-shadow 0.25s ease-in-out; */
+    transition: box-shadow 0.25s ease-in-out;
 }
 
 input[type=checkbox]:hover,
@@ -756,7 +776,7 @@ input[type="checkbox"]:checked:after {
 }
 
 .markdown-source-view.mod-cm6 .task-list-label {
-    margin-inline-start: -9px;
+    margin-inline-start: -0.57em;
 }
 
 .markdown-rendered ul > li {
@@ -1308,11 +1328,18 @@ body {
 .input-button,
 .mod-raised,
 .document-replace-input,
+.pdf-page-input,
 .search-input-container input {
     border: none !important;
     box-shadow: var(--glass-edge) !important;
 }
 
+.pdf-page-input,
 .document-replace-input {
 border-radius: var(--radius-l) !important;
+}
+
+.is-mobile .pdf-toolbar-left {
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
