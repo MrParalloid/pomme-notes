@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 2.0.3
-Updated: 2026-02-02
+Latest release: 2.0.4
+Updated: 2026-02-04
 
 Pomme Notes is a lightweight, subtle theme designed to harmonize with macOS and iOS environments. It strictly adheres to a "Native+" philosophy: keeping the familiar structure of the default Obsidian interface while introducing organic textures, smoother animations, and a modern "Liquid Glass" aesthetic.
 
