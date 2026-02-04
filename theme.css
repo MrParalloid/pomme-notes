@@ -1,7 +1,7 @@
 /*──────────────────────────────────────
 Pomme Notes Theme for Obsidian
-Version 2.0.3
-@paralloid, 2026-02-02
+Version 2.0.4
+@paralloid, 2026-02-04
 ───────────────────────────────────────*/
 
 /* @settings
@@ -119,9 +119,9 @@ body {
 
 @keyframes fade-in-prompt {
   from {
-    opacity: 0.8;
-    transform: scale(1.1);
-    filter: blur(10px);
+    opacity: 0;
+    transform: scale(1.07);
+    filter: blur(2px);
   }
   to {
     opacity: 1;
@@ -144,12 +144,12 @@ body {
     opacity: 0;
     transform: scale(0.8) translateY(-10px);
     backdrop-filter: blur(0px);
-    filter: blur(10px);
+    filter: blur(5px);
   }
   
   60% {
     opacity: 1;
-    transform: scale(1.04);
+    transform: scale(1.03);
     filter: blur(2px);
   }
 
@@ -226,9 +226,6 @@ body {
 
 .mod-root .workspace-tab-header-container .workspace-tab-header {
     border-radius: var(--radius-l) !important;
-    /* margin-bottom: 5px; */
-    /* margin-top: 0px !important; */
-    /* margin-left: 2px; */
     background-color: transparent;
 }
 
@@ -247,26 +244,9 @@ body {
     opacity: 0;
 }
 
-/* .mod-root .workspace-tab-header-container,
-.mod-root .workspace-tab-header-container-inner {
-    margin-left: 0 !important;
-    padding-left: 0;
-    border-left: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-} */
-
 .workspace .workspace-tab-header-inner::after {
     background: transparent !important;
 }
-
-/* .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
-    margin-top: 5px;
-} */
-
-/* .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
-    margin: 6px 4px calc(var(--tab-outline-width)* -1);
-} */
 
 .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
     padding: 2px 0px 0px 15px !important;
@@ -302,7 +282,6 @@ body {
 
 .workspace-split.mod-vertical.mod-root .workspace-tab-header.is-active {
     color: var(--text-extreme);
-    /* font-weight: 500; */
     border: none;
     box-shadow: var(--glass-edge-tab);
     background-color: var(--active-tab-background);
@@ -336,21 +315,81 @@ body {
 
 body:not(.is-mobile) .modal.mod-settings {
     border-radius: var(--radius-l);
-    animation: fade-in-prompt 0.2s cubic-bezier(.69,.39,.55,1.79) forwards;
+    animation: fade-in-prompt 0.2s cubic-bezier(.15,.25,.50,1.30) forwards;
 }
 
-.mod-settings .setting-item-control .dropdown,
-.mod-settings button:not(.clickable-icon)  {
+body button:not(.clickable-icon),
+body .dropdown,
+body .dropdown:hover {
     box-shadow: var(--statusbar-glass-shadow);
 }
 
 .mod-settings .setting-item-control input {
     border-radius: var(--radius-l);
+    box-shadow: var(--statusbar-glass-shadow);
 }
 
 .modal-close-button {
     margin-top: 5px;
     margin-right: 5px;
+}
+
+/* LINTER */
+
+.linter-navigation-item-selected {
+    border: none;
+    box-shadow: var(--glass-edge-tab);
+    background-color: var(--active-tab-background);
+    transition: box-shadow, background-color 0.3s ease-out;
+}
+
+.linter-navigation-item,
+.linter-navigation-item-selected {
+    border-radius: var(--radius-l) !important;
+    background-color: transparent;
+}
+
+.linter-setting-tab-group {
+    border: none;
+}
+
+.linter-navigation-item {
+    margin-right: 2px;
+    border: none;
+}
+
+.linter-navigation-item:hover {
+    border: none;
+}
+
+/* EXCALIDRAW */
+
+.excalidraw .buttonList button,
+.excalidraw .tray-misc-tools-container .default-sidebar-trigger,
+.excalidraw .ToolIcon,
+.excalidraw .main-menu-trigger,
+.excalidraw .App-bottom-bar>.Island,
+.excalidraw .Island.App-toolbar,
+.excalidraw .App-toolbar-container .ToolIcon__icon,
+.excalidraw-search .search-input-container.document-search-input,
+.excalidraw-search.document-search-input,
+.excalidraw-search.document-search-container {
+    border-radius: var(--radius-l);
+}
+
+.excalidraw .tray-misc-tools-container {
+    border-top-left-radius: var(--radius-m);
+    border-bottom-left-radius: var(--radius-m);
+}
+
+.excalidraw .tray-misc-tools-container .default-sidebar-trigger,
+.excalidraw .tray-misc-tools-container .ToolIcon__icon {
+    padding: 3px;
+    margin: 3px;
+}
+
+.excalidraw .Island:not(.App-toolbar) {
+    border-radius: var(--radius-m);
 }
 
 /* TITLE & EMBEDS */
@@ -465,7 +504,7 @@ text-indent: 0px;
 
 body:not(.is-mobile) .prompt {
     /* animation: fade-in-prompt 0.15s cubic-bezier(.59,.63,.55,1.99) forwards; */
-    animation: fade-in-prompt 0.2s cubic-bezier(.20,.40,.80,1.50) forwards;
+    animation: fade-in-prompt 0.2s cubic-bezier(.15,.25,.40,1.50) forwards;
     max-width: 95vw;
     box-shadow: var(--element-shadow);
 }
