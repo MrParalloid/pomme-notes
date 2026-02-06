@@ -1,7 +1,7 @@
 /*──────────────────────────────────────
 Pomme Notes Theme for Obsidian
-Version 2.0.4
-@paralloid, 2026-02-04
+Version 2.0.5
+@paralloid, 2026-02-06
 ───────────────────────────────────────*/
 
 /* @settings
@@ -92,7 +92,7 @@ body {
 /* LIGHT MODE COLORS */
 
 .theme-light {
-    --background-primary: #f7f7f7;
+    --background-primary: #f5f5f5;
     --background-secondary: #efefef;
     --code-background: #efefef;
     --text-extreme: #000000;
@@ -101,11 +101,11 @@ body {
     --titlebar-background-focused: var(--background-secondary);
     --element-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
     --div-color: rgba(170,170,170,0.6);
-    --text-normal: #323232;
+    --text-normal: #404040;
 }
 
 .tinted.theme-light {
-    --background-primary: color-mix(in srgb, #f7f7f7 99%, var(--interactive-accent) 1%) !important;
+    --background-primary: color-mix(in srgb, #f5f5f5 99%, var(--interactive-accent) 1%) !important;
     --background-secondary: color-mix(in srgb, #efefef 97%, var(--interactive-accent) 3%) !important;
 }
 
@@ -1013,6 +1013,10 @@ iframe[src*="youtu"] {
     box-shadow: var(--statusbar-glass-shadow);
 }
 
+.canvas-node-content .markdown-embed-content .node-insert-event .metadata-container {
+    display: none;
+}
+
 /* IMAGE VIEWERS */
 
 body.is-mobile .mobile-image-viewer {
@@ -1284,8 +1288,6 @@ body.is-mobile .iconic-icon {
 .reset-button.svelte-1vwr9dd.svelte-1vwr9dd {
     cursor: pointer;
     color: transparent !important;
-    margin: 0 4px;
-    padding: 0px 4px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='rgb(253, 211, 27)' stroke='orange' stroke-width='0.3' %3E%3Cpath d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' /%3E%3C/svg%3E");
     -webkit-mask-size: auto;
     -webkit-mask-repeat: no-repeat;
@@ -1314,6 +1316,11 @@ body.is-mobile .iconic-icon {
 
 .arrow.svelte-156w7na.svelte-156w7na:hover {
     --color-arrow: var(--color-accent)!important;
+}
+
+.nav.svelte-1vwr9dd.svelte-1vwr9dd {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
 /* INK */
