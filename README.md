@@ -7,22 +7,16 @@ Pomme Notes is a lightweight, subtle theme designed to harmonize with macOS and 
 If you enjoy the original Obsidian experience but want it to feel more like a native app—with softer contrast and tactile depth—this theme is for you.
 
 ## Features
-**Liquid Glass UI**
-Flat overlays replaced with translucent, frosted elements that blur the content behind them, adding depth without clutter.
-- Glassy Modals & Prompts: Quick Switcher and Settings modals float with a native look & feel. All the input prompts feel at home.
-- Floating Status Bar: The status bar is transformed into a centered, floating glass capsule.
-- Active Tabs: Subtle glass highlights and shadows distinguish your active workspace.
-
-**Visual Comfort**
-Engineered for long-term readability by avoiding harsh extremes.
+- **Liquid Glass UI** – Flat overlays replaced with translucent, frosted elements that blur the content behind them, adding depth without clutter.
+- Quick Switcher and Settings modals float with a native look & feel. All the input prompts feel at home.
+- The status bar is transformed into a centered, floating glass capsule.
+- Subtle glass highlights and shadows distinguish your active workspace.
+- Engineered for long-term readability by avoiding harsh extremes.
 - Softened Contrast: Avoids pure white (#ffffff) backgrounds and pure black text. Dark mode uses a deep grey (#191919) with soft silver text (#cccccc) to reduce eye strain.
 - Harmonized Accents: Blockquotes, highlights, and checkboxes automatically calculate their colors based on your primary accent hue.
+- Smooth Fade-ins for Embedded content (PDFs, images, Canvas minimaps) fades in gently upon loading.
 
-**Organic Motion**
 The interface feels alive with subtle, non-intrusive animations.
-- Smooth Fade-ins: Embedded content (PDFs, images, Canvas minimaps) fades in gently upon loading.
-- Menu Dynamics: Context menus scale and slide in, mimicking native OS behavior.
-- Pulse Effects: Subtle flashing animations for specific interaction states.
 
 **Mobile Optimized**
 Extensive work has been done to ensure the theme feels native on iOS and iPadOS.
@@ -31,8 +25,8 @@ Extensive work has been done to ensure the theme feels native on iOS and iPadOS.
 - Clean Layout: Simplified sidebars and reduced noise on smaller screens.
 
 ## Plugin Support
-Pomme Notes includes dedicated styling for popular plugins to ensure they fit the theme's aesthetic:
-- Dataview: Optimized tables and lists with unnecessary hover animations removed.
+Pomme Notes includes dedicated styling for popular plugins:
+- Dataview: Optimized tables and lists + unnecessary hover animations removed.
 - Calendar: Custom grid styling and indicator dots.
 - Ink: Improved integration for handwriting and drawing tools.
 - Iconize & Iconic: Native sizing and spacing for custom icons.
