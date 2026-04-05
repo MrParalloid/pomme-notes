@@ -43,6 +43,8 @@ Click Manage under Themes.
 Search for Pomme Notes.
 Click Install and Use.
 
+<a href='https://ko-fi.com/G2G21XAEJ9' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 ## Screenshots
 <img alt="2026-01-25 at 11 26 26 Pomme Notes 2" src="https://github.com/user-attachments/assets/3196d0e1-723a-49e9-b053-ef14c353ef02" />
 <img alt="Screenshot 2026-01-25 at 11 29 46" src="https://github.com/user-attachments/assets/60bea5f7-a207-4afd-9ff7-1fc7c04e49db" />
