@@ -1,6 +1,6 @@
 # Pomme Notes
-Latest release: 2.0.6
-Updated: 2026-02-13
+Latest release: 2.1.0
+Updated: 2026-06-13
 
 Pomme Notes is a lightweight, subtle theme designed to harmonize with macOS and iOS environments. It strictly adheres to a "Native+" philosophy: keeping the familiar structure of the default Obsidian interface while introducing organic textures, smoother animations, and a modern "Liquid Glass" aesthetic.
 
@@ -15,6 +15,7 @@ If you enjoy the original Obsidian experience but want it to feel more like a na
 - Softened Contrast: Avoids pure white (#ffffff) backgrounds and pure black text. Dark mode uses a deep grey (#191919) with soft silver text (#cccccc) to reduce eye strain.
 - Harmonized Accents: Blockquotes, highlights, and checkboxes automatically calculate their colors based on your primary accent hue.
 - Smooth Fade-ins for Embedded content (PDFs, images, Canvas minimaps) fades in gently upon loading.
+- Updated typography (test mode) – should be easier to read and closer to how Bear Notes works with markdown
 
 The interface feels alive with subtle, non-intrusive animations.
 
