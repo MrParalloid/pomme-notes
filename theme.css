@@ -1428,7 +1428,7 @@ body {
 }
 
 .markdown-rendered > .markdown-preview-section > .markdown-preview-pusher + div:not(.mod-ui) > :first-child, .markdown-rendered > .markdown-preview-section > .mod-ui + div:not(.mod-ui) > :first-child {
-    margin-top: 0 !important;
+    margin-top: 0 !important; }
 
 .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
     padding-top: var(--p-spacing-empty) !important;
