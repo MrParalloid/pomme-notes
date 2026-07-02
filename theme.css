@@ -1,7 +1,7 @@
 /*──────────────────────────────────────
 Pomme Notes Theme for Obsidian
-Version 2.1.0
-@paralloid, 2026-06-13
+Version 2.1.1
+@paralloid, 2026-07-02
 ───────────────────────────────────────*/
 
 /* @settings
@@ -42,15 +42,15 @@ body {
     --list-spacing: 0em;
     --nav-item-background-hover: none;
     --pill-border-width: 1px !important;
-    --radius-l: 32px;
-    --radius-m: 18px;
-    --radius-s: 10px;
-    --radius-xl: 36px;
+    --radius-s: 12px;
+    --radius-m: 24px;
+    --radius-l: 36px;
+    --radius-xl: 48px;
     --setting-items-radius: var(--radius-l);
     --side-padding: 20px;
     --tab-curve: 0px;
     --tab-outline-width: 1px;
-    --tab-radius-active: 12px 12px 0px 0px;
+    --tab-radius-active: var(--radius-m);
     --tab-radius: var(--radius-m);
     --tab-stacked-pane-width: 1200px;
     --text-accent-hover: var(--color-accent-2);
@@ -58,8 +58,14 @@ body {
     --text-highlight-bg: hsla(calc(var(--accent-h) + 120), calc(var(--accent-s) * 0.4), var(--accent-l), 0.5);
     }
 
-.mod-macos {
-    --corner-shape: superellipse(1.1);
+@supports (corner-shape: squircle) {
+    .mod-macos {
+    --corner-shape: squircle;
+    --radius-s: 18px;
+    --radius-m: 32px;
+    --radius-l: 56px;
+    --radius-xl: 64px;
+    }
 }
 
 /* DARK MODE */
@@ -983,11 +989,6 @@ body.is-phone {
     padding-top: 0px;
 }
 
-iframe[src*="youtu"] {
-    width: 100%;
-    border-radius: var(--radius-m);
-}
-
 .mobile-navbar-action.has-longpress-menu .navbar-action-flair {
     display: none;
 }
@@ -1338,6 +1339,10 @@ body {
     box-shadow: var(--glass-edge) !important;
 }
 
+.mod-macos.is-popout-window .mod-settings {
+    border-radius: 0px !important;
+}
+
 .pdf-page-input,
 .document-replace-input {
 border-radius: var(--radius-l) !important;
@@ -1349,87 +1354,15 @@ border-radius: var(--radius-l) !important;
 }
 
 
-/* BEAR TYPOGRAPHY ENGINE FOR OBSIDIAN */
+/* TYPOGRAPHY UPDATE */
 
 body {
-    --bear-heading-top: 1.6em;         /* Space above a heading */
-    --bear-heading-bottom: 0.8em;      /* Space between heading and text */
-    --bear-paragraph-gap: 1em;       /* Space between different block types */
-    --bear-list-item-gap: 0.3em;       /* Space between adjacent list bullets */
+    --p-spacing: 1em;
+    --heading-spacing: 1em;
 }
 
-/* ==========================================================
-   2. LIVE PREVIEW (EDITING MODE)
-   Strictly using paddings to preserve CodeMirror cursor math.
-   ========================================================== */
-
-/* Headings: Push text away from the bottom, and push away from text above */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header {
-    padding-top: var(--bear-heading-top) !important;
-    padding-bottom: var(--bear-heading-bottom) !important;
-}
-
-/* Exception: Remove the top gap if the heading is the very first line of the note */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-header-1 {
-    padding-top: 0 !important;
-} 
-
-/* Lists: Detect when a list starts immediately after normal text/heading */
-.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line) + .cm-line.HyperMD-list-line {
-    padding-top: var(--bear-paragraph-gap) !important;
-}
-
-/* Lists: Detect when normal text starts immediately after a list */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line + .cm-line:not(.HyperMD-list-line):not(.hr) {
-    padding-top: var(--bear-paragraph-gap) !important;
-}
-
-/* Internal List Spacing: Keep list items relatively tight, like Bear */
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-list-line {
-    padding-bottom: var(--bear-list-item-gap) !important;
-}
-
-/* ==========================================================
-   3. READING VIEW
-   Using margins to override standard Obsidian reading layout.
-   ========================================================== */
-
-/* Headings */
-.markdown-rendered h1,
-.markdown-rendered h2,
-.markdown-rendered h3,
-.markdown-rendered h4,
-.markdown-rendered h5,
-.markdown-rendered h6 {
-    margin-top: var(--bear-heading-top) !important;
-    margin-bottom: var(--bear-heading-bottom) !important;
-}
-
-/* Exception: First child top margin */
-.markdown-rendered > :first-child {
-    margin-top: 0 !important;
-}
-
-/* Containers: Paragraphs, Lists, Blockquotes */
-.markdown-rendered .el-p,
-.markdown-rendered .el-ul,
-.markdown-rendered .el-ol,
-.markdown-rendered .el-blockquote {
-    margin-bottom: var(--bear-paragraph-gap) !important;
-}
-
-/* Internal List Spacing */
-.markdown-rendered li {
-    margin-bottom: var(--bear-list-item-gap) !important;
-}
-
-.markdown-rendered li:last-child {
-    margin-bottom: 0 !important; /* Prevents double-gapping at the end of a list */
-}
-
+.cm-s-obsidian .cm-line.HyperMD-header,
 .markdown-rendered > .markdown-preview-section > .markdown-preview-pusher + div:not(.mod-ui) > :first-child, .markdown-rendered > .markdown-preview-section > .mod-ui + div:not(.mod-ui) > :first-child {
-    margin-top: 0 !important; }
-
-.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
-    padding-top: var(--p-spacing-empty) !important;
+    margin-top: 0;
+    padding-top: 0;
 }
